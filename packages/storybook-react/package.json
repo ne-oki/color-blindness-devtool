@@ -1,0 +1,20 @@
+{
+  "name": "@web-components-monorepo-starter/storybook-react",
+  "private": true,
+  "scripts": {
+    "storybook": "storybook dev -p 7007",
+    "build-storybook": "storybook build"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.6.17",
+    "@storybook/addon-interactions": "^7.6.17",
+    "@storybook/addon-links": "^7.6.17",
+    "@storybook/addon-onboarding": "^1.0.11",
+    "@storybook/blocks": "^7.6.17",
+    "@storybook/react": "^7.6.17",
+    "@storybook/react-vite": "^7.6.17",
+    "@storybook/test": "^7.6.17",
+    "@web-components-monorepo-starter/hello-world-react": "*",
+    "storybook": "^7.6.17"
+  }
+}

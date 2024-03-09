@@ -1,0 +1,30 @@
+{
+  "name": "web-components-monorepo-starter",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo build",
+    "clean": "turbo clean",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "turbo lint",
+    "lint:eslint:fix": "turbo lint:eslint:fix",
+    "quality": "npm run format:check && npm run lint && npm run type-check && npm run test",
+    "storybook": "wait-on http://localhost:7007 && npm run storybook:wc & npm run storybook:react:no-open",
+    "storybook:react": "cd packages/storybook-react && npm run storybook",
+    "storybook:react:no-open": "cd packages/storybook-react && npm run storybook -- --no-open",
+    "storybook:wc": "cd packages/storybook && npm run storybook",
+    "test": "turbo test",
+    "type-check": "turbo type-check",
+    "prepare": "lefthook install"
+  },
+  "devDependencies": {
+    "lefthook": "^1.6.1",
+    "prettier": "^3.2.5",
+    "prettier-plugin-organize-imports": "^3.2.4",
+    "turbo": "latest",
+    "wait-on": "^7.2.0"
+  }
+}

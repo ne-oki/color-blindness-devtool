@@ -1,0 +1,10 @@
+{
+  "name": "@web-components-monorepo-starter/base-configs",
+  "private": true,
+  "devDependencies": {
+    "@eslint/js": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "globals": "^14.0.0",
+    "typescript-eslint": "^7.0.2"
+  }
+}

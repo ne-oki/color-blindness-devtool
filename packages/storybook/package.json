@@ -1,0 +1,17 @@
+{
+  "name": "@web-components-monorepo-starter/storybook",
+  "private": true,
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.6.17",
+    "@storybook/addon-links": "^7.6.17",
+    "@storybook/blocks": "^7.6.17",
+    "@storybook/web-components": "^7.6.17",
+    "@storybook/web-components-vite": "^7.6.17",
+    "@web-components-monorepo-starter/hello-world": "*",
+    "storybook": "^7.6.17"
+  }
+}

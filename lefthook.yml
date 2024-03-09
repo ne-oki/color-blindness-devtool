@@ -1,0 +1,9 @@
+pre-commit:
+  commands:
+    quality:
+      run: npm run quality
+
+pre-push:
+  commands:
+    quality:
+      run: npm run quality
