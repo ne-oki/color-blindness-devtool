@@ -33,7 +33,7 @@ function isColorBlindnessFilterKind(
   ].includes(kind)
 }
 
-const filterMatrixValues: Record<
+export const filterMatrixValues: Record<
   Exclude<ColorBlindnessFilterKind, 'trichromacy'>,
   string
 > = {

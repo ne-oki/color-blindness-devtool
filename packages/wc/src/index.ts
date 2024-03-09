@@ -1,1 +1,4 @@
-export * from './color-blindness-filter'
+export {
+  ColorBlindnessFilter,
+  ColorBlindnessFilterKind,
+} from './color-blindness-filter'

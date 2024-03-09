@@ -16,7 +16,7 @@
     "storybook:react": "cd packages/storybook-react && npm run storybook",
     "storybook:react:no-open": "cd packages/storybook-react && npm run storybook -- --no-open",
     "storybook:wc": "cd packages/storybook && npm run storybook",
-    "test": "echo \"TODO: write tests\" && exit 0",
+    "test": "turbo test",
     "type-check": "turbo type-check",
     "prepare": "lefthook install"
   },
