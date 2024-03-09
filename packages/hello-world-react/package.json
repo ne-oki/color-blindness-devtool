@@ -1,5 +1,5 @@
 {
-  "name": "@web-components-monorepo-starter/hello-world-react",
+  "name": "@color-blindness-devtool/react",
   "version": "0.0.0",
   "private": true,
   "description": "A React component with TypeScript and Lit",
@@ -24,8 +24,8 @@
   },
   "dependencies": {
     "@lit/react": "^1.0.3",
-    "@web-components-monorepo-starter/base-configs": "*",
-    "@web-components-monorepo-starter/hello-world": "*"
+    "@color-blindness-devtool/base-configs": "*",
+    "color-blindness-devtool": "*"
   },
   "devDependencies": {
     "rimraf": "^5.0.5",

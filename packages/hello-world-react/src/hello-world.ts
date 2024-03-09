@@ -1,7 +1,7 @@
 import { createComponent } from '@lit/react'
 import * as React from 'react'
 
-import { HelloWorld as HelloWorldWC } from '@web-components-monorepo-starter/hello-world'
+import { HelloWorld as HelloWorldWC } from 'color-blindness-devtool'
 
 export const HelloWorld = createComponent({
   react: React,

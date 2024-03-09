@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/web-components'
 import { html } from 'lit'
 
-import '@web-components-monorepo-starter/hello-world'
+import 'color-blindness-devtool'
 
 interface HelloWorldProps {
   name: string

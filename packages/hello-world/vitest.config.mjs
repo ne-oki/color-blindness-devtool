@@ -1,3 +1,3 @@
-import baseConfig from '@web-components-monorepo-starter/base-configs/vitest.base.config.mjs'
+import baseConfig from '@color-blindness-devtool/base-configs/vitest.base.config.mjs'
 
 export default baseConfig

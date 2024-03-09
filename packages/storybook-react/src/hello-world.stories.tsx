@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { HelloWorld } from '@web-components-monorepo-starter/hello-world-react'
+import { HelloWorld } from '@color-blindness-devtool/react'
 
 const meta = {
   title: 'HelloWorld',

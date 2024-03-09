@@ -1,5 +1,5 @@
 {
-  "name": "@web-components-monorepo-starter/hello-world",
+  "name": "color-blindness-devtool",
   "version": "0.0.0",
   "private": true,
   "description": "A web component with TypeScript and Lit",
@@ -37,7 +37,7 @@
   "devDependencies": {
     "@custom-elements-manifest/analyzer": "^0.9.2",
     "@testing-library/user-event": "^14.5.2",
-    "@web-components-monorepo-starter/base-configs": "*",
+    "@color-blindness-devtool/base-configs": "*",
     "jsdom": "^24.0.0",
     "lit-analyzer": "^2.0.3",
     "rimraf": "^5.0.5",

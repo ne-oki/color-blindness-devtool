@@ -1,5 +1,5 @@
 {
-  "name": "@web-components-monorepo-starter/base-configs",
+  "name": "@color-blindness-devtool/base-configs",
   "private": true,
   "devDependencies": {
     "@eslint/js": "^8.57.0",

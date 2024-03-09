@@ -1,5 +1,5 @@
 {
-  "name": "@web-components-monorepo-starter/storybook",
+  "name": "@color-blindness-devtool/storybook",
   "private": true,
   "scripts": {
     "storybook": "storybook dev -p 6006",
@@ -11,7 +11,7 @@
     "@storybook/blocks": "^7.6.17",
     "@storybook/web-components": "^7.6.17",
     "@storybook/web-components-vite": "^7.6.17",
-    "@web-components-monorepo-starter/hello-world": "*",
+    "color-blindness-devtool": "*",
     "storybook": "^7.6.17"
   }
 }
