@@ -17,10 +17,26 @@ export class ColorBlindnessDevtoolCard extends LitElement {
     css`
       .color-blindness-devtool-card__root {
         width: 100%;
-        background: #1e1e21;
-        border: 3px solid #363639;
+        background: #13151a;
+        border: 3px solid #2d2f38;
         border-radius: 0.25rem;
         font-size: 0.875rem;
+        font-weight: 400;
+        font-family:
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          'Segoe UI',
+          Roboto,
+          'Helvetica Neue',
+          Arial,
+          'Noto Sans',
+          sans-serif,
+          'Apple Color Emoji',
+          'Segoe UI Emoji',
+          'Segoe UI Symbol',
+          'Noto Color Emoji';
         color: white;
         display: flex;
         flex-direction: column;
@@ -58,11 +74,15 @@ export class ColorBlindnessDevtoolCard extends LitElement {
         display: flex;
         flex-direction: column;
         padding: 0.5rem;
-        gap: 0.125rem;
+        gap: 0.25rem;
+      }
+
+      .color-blindness-devtool-card__kind {
+        font-size: 1rem;
       }
 
       .color-blindness-devtool-card__description {
-        color: #737374;
+        color: #bfc1c9;
       }
     `,
   ]

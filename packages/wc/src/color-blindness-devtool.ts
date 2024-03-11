@@ -32,28 +32,45 @@ export class ColorBlindnessDevtool extends LitElement {
     destyle,
     css`
       h1 {
-        font-weight: 900;
-        font-size: 1.125rem;
+        font-weight: 700;
+        font-size: 1.25rem;
       }
 
       hr {
         margin: 1rem 0;
-        border: 1px solid #38383b;
+        border: 1px solid #1c1e24;
       }
 
       .color-blindness-devtool__root {
         position: fixed;
         bottom: 0;
+        font-size: 0.875rem;
+        font-weight: 400;
+        font-family:
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          'Segoe UI',
+          Roboto,
+          'Helvetica Neue',
+          Arial,
+          'Noto Sans',
+          sans-serif,
+          'Apple Color Emoji',
+          'Segoe UI Emoji',
+          'Segoe UI Symbol',
+          'Noto Color Emoji';
         left: 50%;
         transform: translateX(-50%);
         z-index: 9999;
       }
 
       .color-blindness-devtool__window {
-        background: #262629;
-        border: 1px solid #39393c;
-        border-radius: 8px;
-        padding: 16px;
+        background: #13151a;
+        border: 1px solid #2d2f38;
+        border-radius: 0.5rem;
+        padding: 1rem;
         color: white;
         width: 48rem;
       }
