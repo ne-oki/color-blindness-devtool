@@ -27,6 +27,7 @@ const cardItems: CardItem[] = [
 @customElement('color-blindness-devtool')
 export class ColorBlindnessDevtool extends LitElement {
   private selectedKind: ColorBlindnessFilterKind = 'trichromacy'
+  private isOpen = false
 
   static override styles = [
     destyle,
@@ -37,8 +38,20 @@ export class ColorBlindnessDevtool extends LitElement {
       }
 
       hr {
-        margin: 1rem 0;
+        margin: 1.5rem 0;
         border: 1px solid #1c1e24;
+      }
+
+      @keyframes overshoot {
+        0% {
+          transform: translateX(-50%) translateY(100%);
+        }
+        70% {
+          transform: translateX(-50%) translateY(-2rem);
+        }
+        100% {
+          transform: translateX(-50%) translateY(-1rem);
+        }
       }
 
       .color-blindness-devtool__root {
@@ -62,15 +75,51 @@ export class ColorBlindnessDevtool extends LitElement {
           'Segoe UI Symbol',
           'Noto Color Emoji';
         left: 50%;
+        z-index: calc(infinity);
+        transform: translateX(-50%) translateY(100%);
+        transition: transform 0.35s;
+        animation-fill-mode: forwards;
+      }
+
+      .color-blindness-devtool__root[data-state='open'] {
+        transform: translateX(-50%) translateY(-1rem);
+        animation: overshoot 0.45s ease-in-out;
+      }
+
+      .color-blindness-devtool__toggle-button {
+        position: absolute;
+        width: 5rem;
+        height: 2.5rem;
+        left: 50%;
         transform: translateX(-50%);
-        z-index: 9999;
+        top: calc(-2.5rem + 1px);
+        background: #13151a;
+        border: 1px solid #2d2f38;
+        border-bottom: none;
+        border-radius: 50% / 100% 100% 0 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .color-blindness-devtool__toggle-button-icon {
+        color: #bfc1c9;
+        width: 2rem;
+        height: 2rem;
+        transform: translateY(0.3rem);
+        transition: transform 0.35s;
+      }
+
+      .color-blindness-devtool__root[data-state='open']
+        .color-blindness-devtool__toggle-button-icon {
+        transform: translateY(0.3rem) rotate(180deg);
       }
 
       .color-blindness-devtool__window {
         background: #13151a;
         border: 1px solid #2d2f38;
         border-radius: 0.5rem;
-        padding: 1rem;
+        padding: 1.5rem;
         color: white;
         width: 48rem;
       }
@@ -89,6 +138,11 @@ export class ColorBlindnessDevtool extends LitElement {
     `,
   ]
 
+  private handleToggleButtonClick() {
+    this.isOpen = !this.isOpen
+    this.requestUpdate()
+  }
+
   private handleCardSelect(
     event: CustomEvent<{ kind: ColorBlindnessFilterKind }>,
   ) {
@@ -101,7 +155,29 @@ export class ColorBlindnessDevtool extends LitElement {
       <color-blindness-filter kind=${this.selectedKind}>
         <slot></slot>
       </color-blindness-filter>
-      <div class="color-blindness-devtool__root">
+      <div
+        class="color-blindness-devtool__root"
+        data-state=${this.isOpen ? 'open' : 'closed'}
+      >
+        <button
+          class="color-blindness-devtool__toggle-button"
+          @click=${this.handleToggleButtonClick}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="color-blindness-devtool__toggle-button-icon"
+          >
+            <path d="m18 15-6-6-6 6" />
+          </svg>
+        </button>
         <div class="color-blindness-devtool__window">
           <header class="color-blindness-devtool__window-header">
             <section class="color-blindness-devtool__window-header-left">
