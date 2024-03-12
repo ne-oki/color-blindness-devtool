@@ -128,6 +128,27 @@ export class ColorBlindnessDevtool extends LitElement {
     `,
   ]
 
+  private handleWindowClick = (event: MouseEvent) => {
+    if (
+      this.isOpen &&
+      event.target instanceof HTMLElement &&
+      !event.target.closest('color-blindness-devtool')
+    ) {
+      this.isOpen = false
+      this.requestUpdate()
+    }
+  }
+
+  override connectedCallback() {
+    super.connectedCallback()
+    window.addEventListener('click', this.handleWindowClick)
+  }
+
+  override disconnectedCallback() {
+    super.disconnectedCallback()
+    window.removeEventListener('click', this.handleWindowClick)
+  }
+
   private handleToggleButtonClick() {
     this.isOpen = !this.isOpen
     this.requestUpdate()
