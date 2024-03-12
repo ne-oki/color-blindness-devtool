@@ -4,39 +4,22 @@ import { classMap } from 'lit/directives/class-map.js'
 
 import './color-blindness-filter'
 import { ColorBlindnessFilterKind } from './color-blindness-filter'
-import { destyle } from './destyle'
+import { resetStyles } from './reset-styles'
 
 function capitalize(str: string) {
   return str.charAt(0).toUpperCase() + str.slice(1)
 }
 
 @customElement('color-blindness-devtool-card')
-export class ColorBlindnessDevtoolCard extends LitElement {
+export class Card extends LitElement {
   static override styles = [
-    destyle,
+    resetStyles,
     css`
       .color-blindness-devtool-card__root {
         width: 100%;
         background: #13151a;
         border: 3px solid #2d2f38;
         border-radius: 0.25rem;
-        font-size: 0.875rem;
-        font-weight: 400;
-        font-family:
-          ui-sans-serif,
-          system-ui,
-          -apple-system,
-          BlinkMacSystemFont,
-          'Segoe UI',
-          Roboto,
-          'Helvetica Neue',
-          Arial,
-          'Noto Sans',
-          sans-serif,
-          'Apple Color Emoji',
-          'Segoe UI Emoji',
-          'Segoe UI Symbol',
-          'Noto Color Emoji';
         color: white;
         display: flex;
         flex-direction: column;
@@ -132,6 +115,6 @@ export class ColorBlindnessDevtoolCard extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'color-blindness-devtool-card': ColorBlindnessDevtoolCard
+    'color-blindness-devtool-card': Card
   }
 }

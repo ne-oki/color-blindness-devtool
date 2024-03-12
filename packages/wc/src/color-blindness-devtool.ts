@@ -1,11 +1,12 @@
 import { LitElement, css, html } from 'lit'
 import { customElement } from 'lit/decorators.js'
 
-import './color-blindness-devtool-card'
-import { colorBlindnessDevtoolIconHtml } from './color-blindness-devtool-icon-html'
+import './card'
+import './chevron-up-icon'
 import './color-blindness-filter'
 import { ColorBlindnessFilterKind } from './color-blindness-filter'
-import { destyle } from './destyle'
+import './logo-icon'
+import { resetStyles } from './reset-styles'
 
 interface CardItem {
   kind: ColorBlindnessFilterKind
@@ -30,7 +31,7 @@ export class ColorBlindnessDevtool extends LitElement {
   private isOpen = false
 
   static override styles = [
-    destyle,
+    resetStyles,
     css`
       h1 {
         font-weight: 700;
@@ -57,23 +58,6 @@ export class ColorBlindnessDevtool extends LitElement {
       .color-blindness-devtool__root {
         position: fixed;
         bottom: 0;
-        font-size: 0.875rem;
-        font-weight: 400;
-        font-family:
-          ui-sans-serif,
-          system-ui,
-          -apple-system,
-          BlinkMacSystemFont,
-          'Segoe UI',
-          Roboto,
-          'Helvetica Neue',
-          Arial,
-          'Noto Sans',
-          sans-serif,
-          'Apple Color Emoji',
-          'Segoe UI Emoji',
-          'Segoe UI Symbol',
-          'Noto Color Emoji';
         left: 50%;
         z-index: calc(infinity);
         transform: translateX(-50%) translateY(100%);
@@ -104,10 +88,9 @@ export class ColorBlindnessDevtool extends LitElement {
 
       .color-blindness-devtool__toggle-button-icon {
         color: #bfc1c9;
-        width: 2rem;
-        height: 2rem;
         transform: translateY(0.3rem);
         transition: transform 0.35s;
+        --size: 2rem;
       }
 
       .color-blindness-devtool__root[data-state='open']
@@ -128,6 +111,13 @@ export class ColorBlindnessDevtool extends LitElement {
         display: flex;
         align-items: center;
         gap: 0.5rem;
+      }
+
+      .color-blindness-devtool__window-header-left
+        > color-blindness-devtool-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       .color-blindness-devtool__window-list {
@@ -163,25 +153,14 @@ export class ColorBlindnessDevtool extends LitElement {
           class="color-blindness-devtool__toggle-button"
           @click=${this.handleToggleButtonClick}
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+          <chevron-up-icon
             class="color-blindness-devtool__toggle-button-icon"
-          >
-            <path d="m18 15-6-6-6 6" />
-          </svg>
+          ></chevron-up-icon>
         </button>
         <div class="color-blindness-devtool__window">
           <header class="color-blindness-devtool__window-header">
             <section class="color-blindness-devtool__window-header-left">
-              <div>${colorBlindnessDevtoolIconHtml}</div>
+              <color-blindness-devtool-icon></color-blindness-devtool-icon>
               <h1>Color Blindness DevTool</h1>
             </section>
           </header>
