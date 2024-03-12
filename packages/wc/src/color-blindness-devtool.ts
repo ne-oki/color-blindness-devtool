@@ -114,7 +114,7 @@ export class ColorBlindnessDevtool extends LitElement {
       }
 
       .color-blindness-devtool__window-header-left
-        > color-blindness-devtool-icon {
+        > color-blindness-devtool-logo-icon {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -153,14 +153,14 @@ export class ColorBlindnessDevtool extends LitElement {
           class="color-blindness-devtool__toggle-button"
           @click=${this.handleToggleButtonClick}
         >
-          <chevron-up-icon
+          <color-blindness-devtool-chevron-up-icon
             class="color-blindness-devtool__toggle-button-icon"
-          ></chevron-up-icon>
+          ></color-blindness-devtool-chevron-up-icon>
         </button>
         <div class="color-blindness-devtool__window">
           <header class="color-blindness-devtool__window-header">
             <section class="color-blindness-devtool__window-header-left">
-              <color-blindness-devtool-icon></color-blindness-devtool-icon>
+              <color-blindness-devtool-logo-icon></color-blindness-devtool-logo-icon>
               <h1>Color Blindness DevTool</h1>
             </section>
           </header>
