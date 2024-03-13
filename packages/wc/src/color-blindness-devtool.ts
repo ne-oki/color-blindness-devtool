@@ -50,22 +50,22 @@ export class ColorBlindnessDevtool extends LitElement {
 
       ul {
         display: grid;
-        gap: 1rem;
+        gap: 0.5rem;
         grid-template-columns: 1fr 1fr 1fr;
       }
 
       hr {
-        margin: 1.5rem 0;
+        margin: 1rem 0;
         border: 1px solid var(--rule);
       }
 
       button {
         position: absolute;
-        width: 5rem;
-        height: 2.5rem;
+        width: 4.5rem;
+        height: 2.25rem;
         left: 50%;
         transform: translateX(-50%);
-        top: calc(-2.5rem + 1px);
+        top: calc(-2.25rem + 1px);
         background: var(--background);
         border: 1px solid var(--border);
         border-bottom: none;
@@ -109,8 +109,8 @@ export class ColorBlindnessDevtool extends LitElement {
       }
 
       color-blindness-devtool-chevron-up-icon::part(icon) {
-        width: 2rem;
-        height: 2rem;
+        width: 1.5rem;
+        height: 1.5rem;
       }
 
       .root[data-state='open'] color-blindness-devtool-chevron-up-icon {
@@ -121,9 +121,9 @@ export class ColorBlindnessDevtool extends LitElement {
         background: var(--background);
         border: 1px solid var(--border);
         border-radius: 0.5rem;
-        padding: 1.5rem;
+        padding: 1rem;
         color: white;
-        width: 48rem;
+        width: 40rem;
       }
 
       header {

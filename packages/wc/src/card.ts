@@ -26,7 +26,7 @@ export class Card extends LitElement {
       button {
         width: 100%;
         background: var(--background);
-        border: 3px solid var(--border);
+        border: 2px solid var(--border);
         border-radius: 0.25rem;
         color: white;
         display: flex;
@@ -35,17 +35,18 @@ export class Card extends LitElement {
       }
 
       button.active {
-        border: 3px solid var(--accent);
+        border: 2px solid var(--accent);
       }
 
       color-blindness-filter {
         box-sizing: border-box;
         width: 100%;
-        padding: 0.125rem;
+        padding: 0.25rem;
+        padding-bottom: 0;
       }
 
       .preview {
-        height: 8rem;
+        height: 6rem;
         background: linear-gradient(
           to right,
           rgb(255, 81, 47) 1.7%,
