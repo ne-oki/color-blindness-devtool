@@ -39,6 +39,7 @@ export class Card extends LitElement {
       }
 
       color-blindness-filter {
+        box-sizing: border-box;
         width: 100%;
         padding: 0.125rem;
       }
