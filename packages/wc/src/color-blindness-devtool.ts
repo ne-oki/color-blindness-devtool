@@ -1,5 +1,5 @@
 import { LitElement, css, html } from 'lit'
-import { customElement } from 'lit/decorators.js'
+import { customElement, state } from 'lit/decorators.js'
 
 import packageJson from '../package.json'
 import './card'
@@ -29,9 +29,6 @@ const cardItems: CardItem[] = [
 
 @customElement('color-blindness-devtool')
 export class ColorBlindnessDevtool extends LitElement {
-  private selectedKind: ColorBlindnessFilterKind = 'trichromacy'
-  private isOpen = false
-
   static override styles = [
     resetStyles,
     css`
@@ -166,6 +163,12 @@ export class ColorBlindnessDevtool extends LitElement {
     `,
   ]
 
+  @state()
+  private isOpen = false
+
+  @state()
+  private selectedKind: ColorBlindnessFilterKind = 'trichromacy'
+
   private handleWindowClick = (event: MouseEvent) => {
     if (
       this.isOpen &&
@@ -173,7 +176,6 @@ export class ColorBlindnessDevtool extends LitElement {
       !event.target.closest('color-blindness-devtool')
     ) {
       this.isOpen = false
-      this.requestUpdate()
     }
   }
 
@@ -189,14 +191,12 @@ export class ColorBlindnessDevtool extends LitElement {
 
   private handleToggleButtonClick() {
     this.isOpen = !this.isOpen
-    this.requestUpdate()
   }
 
   private handleCardSelect(
     event: CustomEvent<{ kind: ColorBlindnessFilterKind }>,
   ) {
     this.selectedKind = event.detail.kind
-    this.requestUpdate()
   }
 
   override render() {
