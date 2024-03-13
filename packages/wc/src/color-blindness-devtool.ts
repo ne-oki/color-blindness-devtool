@@ -61,11 +61,11 @@ export class ColorBlindnessDevtool extends LitElement {
 
       button {
         position: absolute;
-        width: 4.5rem;
-        height: 2.25rem;
+        width: 4rem;
+        height: 2rem;
         left: 50%;
         transform: translateX(-50%);
-        top: calc(-2.25rem + 1px);
+        top: calc(-2rem + 1px);
         background: var(--background);
         border: 1px solid var(--border);
         border-bottom: none;
@@ -123,7 +123,7 @@ export class ColorBlindnessDevtool extends LitElement {
         border-radius: 0.5rem;
         padding: 1rem;
         color: white;
-        width: 40rem;
+        width: 36rem;
       }
 
       header {
@@ -138,7 +138,6 @@ export class ColorBlindnessDevtool extends LitElement {
 
       .version {
         color: var(--muted);
-        font-size: 0.875rem;
         font-family:
           ui-monospace,
           SFMono-Regular,

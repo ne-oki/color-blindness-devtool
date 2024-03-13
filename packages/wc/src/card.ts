@@ -17,10 +17,7 @@ export class Card extends LitElement {
     css`
       p {
         color: var(--muted);
-      }
-
-      h3 {
-        font-size: 1rem;
+        font-size: 0.75rem;
       }
 
       button {
@@ -46,7 +43,7 @@ export class Card extends LitElement {
       }
 
       .preview {
-        height: 6rem;
+        height: 5rem;
         background: linear-gradient(
           to right,
           rgb(255, 81, 47) 1.7%,
