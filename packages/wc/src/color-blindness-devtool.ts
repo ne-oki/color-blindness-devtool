@@ -33,14 +33,44 @@ export class ColorBlindnessDevtool extends LitElement {
   static override styles = [
     resetStyles,
     css`
+      :host {
+        --background: #13151a;
+        --border: #2d2f38;
+        --border-active: #055de3;
+        --rule: #1c1e24;
+        --muted: #bfc1c9;
+      }
+
       h1 {
         font-weight: 700;
         font-size: 1.25rem;
       }
 
+      ul {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
       hr {
         margin: 1.5rem 0;
-        border: 1px solid #1c1e24;
+        border: 1px solid var(--rule);
+      }
+
+      button {
+        position: absolute;
+        width: 5rem;
+        height: 2.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        top: calc(-2.5rem + 1px);
+        background: var(--background);
+        border: 1px solid var(--border);
+        border-bottom: none;
+        border-radius: 50% / 100% 100% 0 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       @keyframes overshoot {
@@ -55,7 +85,7 @@ export class ColorBlindnessDevtool extends LitElement {
         }
       }
 
-      .color-blindness-devtool__root {
+      .root {
         position: fixed;
         bottom: 0;
         left: 50%;
@@ -65,65 +95,45 @@ export class ColorBlindnessDevtool extends LitElement {
         animation-fill-mode: forwards;
       }
 
-      .color-blindness-devtool__root[data-state='open'] {
+      .root[data-state='open'] {
         transform: translateX(-50%) translateY(-1rem);
         animation: overshoot 0.45s ease-in-out;
       }
 
-      .color-blindness-devtool__toggle-button {
-        position: absolute;
-        width: 5rem;
-        height: 2.5rem;
-        left: 50%;
-        transform: translateX(-50%);
-        top: calc(-2.5rem + 1px);
-        background: #13151a;
-        border: 1px solid #2d2f38;
-        border-bottom: none;
-        border-radius: 50% / 100% 100% 0 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .color-blindness-devtool__toggle-button-icon {
-        color: #bfc1c9;
+      color-blindness-devtool-chevron-up-icon {
+        color: var(--muted);
         transform: translateY(0.3rem);
         transition: transform 0.35s;
-        --size: 2rem;
       }
 
-      .color-blindness-devtool__root[data-state='open']
-        .color-blindness-devtool__toggle-button-icon {
+      color-blindness-devtool-chevron-up-icon::part(icon) {
+        width: 2rem;
+        height: 2rem;
+      }
+
+      .root[data-state='open'] color-blindness-devtool-chevron-up-icon {
         transform: translateY(0.3rem) rotate(180deg);
       }
 
-      .color-blindness-devtool__window {
-        background: #13151a;
-        border: 1px solid #2d2f38;
+      .window {
+        background: var(--background);
+        border: 1px solid var(--border);
         border-radius: 0.5rem;
         padding: 1.5rem;
         color: white;
         width: 48rem;
       }
 
-      .color-blindness-devtool__window-header-left {
+      .header-left {
         display: flex;
         align-items: center;
         gap: 0.5rem;
       }
 
-      .color-blindness-devtool__window-header-left
-        > color-blindness-devtool-logo-icon {
+      .header-left > color-blindness-devtool-logo-icon {
         display: flex;
         align-items: center;
         justify-content: center;
-      }
-
-      .color-blindness-devtool__window-list {
-        display: grid;
-        gap: 1rem;
-        grid-template-columns: 1fr 1fr 1fr;
       }
     `,
   ]
@@ -166,28 +176,20 @@ export class ColorBlindnessDevtool extends LitElement {
       <color-blindness-filter kind=${this.selectedKind}>
         <slot></slot>
       </color-blindness-filter>
-      <div
-        class="color-blindness-devtool__root"
-        data-state=${this.isOpen ? 'open' : 'closed'}
-      >
-        <button
-          class="color-blindness-devtool__toggle-button"
-          @click=${this.handleToggleButtonClick}
-        >
-          <color-blindness-devtool-chevron-up-icon
-            class="color-blindness-devtool__toggle-button-icon"
-          ></color-blindness-devtool-chevron-up-icon>
+      <div class="root" data-state=${this.isOpen ? 'open' : 'closed'}>
+        <button @click=${this.handleToggleButtonClick}>
+          <color-blindness-devtool-chevron-up-icon></color-blindness-devtool-chevron-up-icon>
         </button>
-        <div class="color-blindness-devtool__window">
-          <header class="color-blindness-devtool__window-header">
-            <section class="color-blindness-devtool__window-header-left">
+        <div class="window">
+          <header>
+            <section class="header-left">
               <color-blindness-devtool-logo-icon></color-blindness-devtool-logo-icon>
-              <h1>Color Blindness DevTool</h1>
+              <h1 class="title">Color Blindness DevTool</h1>
             </section>
           </header>
           <hr />
           <main>
-            <ul class="color-blindness-devtool__window-list">
+            <ul>
               ${cardItems.map(
                 ({ kind, description }) => html`
                   <li>

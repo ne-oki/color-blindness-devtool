@@ -15,10 +15,18 @@ export class Card extends LitElement {
   static override styles = [
     resetStyles,
     css`
-      .color-blindness-devtool-card__root {
+      p {
+        color: var(--muted);
+      }
+
+      h3 {
+        font-size: 1rem;
+      }
+
+      button {
         width: 100%;
-        background: #13151a;
-        border: 3px solid #2d2f38;
+        background: var(--background);
+        border: 3px solid var(--border);
         border-radius: 0.25rem;
         color: white;
         display: flex;
@@ -26,16 +34,16 @@ export class Card extends LitElement {
         overflow: hidden;
       }
 
-      .color-blindness-devtool-card__root.active {
-        border: 3px solid #055de3;
+      button.active {
+        border: 3px solid var(--border-active);
       }
 
-      .color-blindness-devtool-card__preview-filter {
+      color-blindness-filter {
         width: 100%;
         padding: 0.125rem;
       }
 
-      .color-blindness-devtool-card__preview {
+      .preview {
         height: 8rem;
         background: linear-gradient(
           to right,
@@ -53,19 +61,11 @@ export class Card extends LitElement {
         );
       }
 
-      .color-blindness-devtool-card__content {
+      .content {
         display: flex;
         flex-direction: column;
         padding: 0.5rem;
         gap: 0.25rem;
-      }
-
-      .color-blindness-devtool-card__kind {
-        font-size: 1rem;
-      }
-
-      .color-blindness-devtool-card__description {
-        color: #bfc1c9;
       }
     `,
   ]
@@ -88,25 +88,15 @@ export class Card extends LitElement {
   override render() {
     return html`
       <button
-        class=${classMap({
-          'color-blindness-devtool-card__root': true,
-          active: this.active,
-        })}
+        class=${classMap({ active: this.active })}
         @click=${this.handleClick}
       >
-        <color-blindness-filter
-          kind=${this.kind}
-          class="color-blindness-devtool-card__preview-filter"
-        >
-          <div class="color-blindness-devtool-card__preview"></div>
+        <color-blindness-filter kind=${this.kind}>
+          <div class="preview"></div>
         </color-blindness-filter>
-        <div class="color-blindness-devtool-card__content">
-          <h3 class="color-blindness-devtool-card__kind">
-            ${capitalize(this.kind)}
-          </h3>
-          <p class="color-blindness-devtool-card__description">
-            ${this.description}
-          </p>
+        <div class="content">
+          <h3>${capitalize(this.kind)}</h3>
+          <p>${this.description}</p>
         </div>
       </button>
     `

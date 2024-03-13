@@ -1,18 +1,18 @@
-import { LitElement, css, html } from 'lit'
+import { LitElement, html } from 'lit'
 import { customElement } from 'lit/decorators.js'
 
 @customElement('color-blindness-devtool-logo-icon')
 export class LogoIcon extends LitElement {
-  static override styles = css`
-    svg {
-      width: var(--size, 1.5rem);
-      height: var(--size, 1.5rem);
-    }
-  `
-
   override render() {
     return html`
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        part="icon"
+      >
         <path
           d="M16.882 10.6919C17.1227 11.5902 17.1227 12.4099 16.882 13.3082L16.2826 13.6178L12 12.0001L16.3365 10.4315L16.882 10.6919Z"
           fill="#FF0000"
