@@ -35,7 +35,7 @@ export class Card extends LitElement {
       }
 
       button.active {
-        border: 3px solid var(--border-active);
+        border: 3px solid var(--accent);
       }
 
       color-blindness-filter {

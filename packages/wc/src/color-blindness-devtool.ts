@@ -1,10 +1,12 @@
 import { LitElement, css, html } from 'lit'
 import { customElement } from 'lit/decorators.js'
 
+import packageJson from '../package.json'
 import './card'
 import './chevron-up-icon'
 import './color-blindness-filter'
 import { ColorBlindnessFilterKind } from './color-blindness-filter'
+import './github-icon'
 import './logo-icon'
 import { resetStyles } from './reset-styles'
 
@@ -36,7 +38,7 @@ export class ColorBlindnessDevtool extends LitElement {
       :host {
         --background: #13151a;
         --border: #2d2f38;
-        --border-active: #055de3;
+        --accent: #055de3;
         --rule: #1c1e24;
         --muted: #bfc1c9;
       }
@@ -124,16 +126,43 @@ export class ColorBlindnessDevtool extends LitElement {
         width: 48rem;
       }
 
-      .header-left {
+      header {
         display: flex;
         align-items: center;
         gap: 0.5rem;
       }
 
-      .header-left > color-blindness-devtool-logo-icon {
+      header > a {
+        margin-left: auto;
+      }
+
+      .version {
+        color: var(--muted);
+        font-size: 0.875rem;
+        font-family:
+          ui-monospace,
+          SFMono-Regular,
+          Menlo,
+          Monaco,
+          Consolas,
+          Liberation Mono,
+          Courier New,
+          monospace;
+      }
+
+      color-blindness-devtool-logo-icon,
+      color-blindness-devtool-github-icon {
         display: flex;
         align-items: center;
         justify-content: center;
+      }
+
+      color-blindness-devtool-github-icon {
+        color: var(--muted);
+      }
+
+      color-blindness-devtool-github-icon:hover {
+        color: white;
       }
     `,
   ]
@@ -182,10 +211,16 @@ export class ColorBlindnessDevtool extends LitElement {
         </button>
         <div class="window">
           <header>
-            <section class="header-left">
-              <color-blindness-devtool-logo-icon></color-blindness-devtool-logo-icon>
-              <h1 class="title">Color Blindness DevTool</h1>
-            </section>
+            <color-blindness-devtool-logo-icon></color-blindness-devtool-logo-icon>
+            <h1 class="title">Color Blindness DevTool</h1>
+            <span class="version">${packageJson.version}</span>
+            <a
+              href="https://github.com/neokidev/color-blindness-devtool"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <color-blindness-devtool-github-icon></color-blindness-devtool-github-icon>
+            </a>
           </header>
           <hr />
           <main>

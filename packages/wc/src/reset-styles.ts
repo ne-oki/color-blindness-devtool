@@ -49,6 +49,11 @@ export const resetStyles = css`
     clear: both;
     color: inherit;
   }
+  a {
+    background-color: transparent;
+    text-decoration: none;
+    color: inherit;
+  }
   button {
     -webkit-appearance: none;
     appearance: none;
