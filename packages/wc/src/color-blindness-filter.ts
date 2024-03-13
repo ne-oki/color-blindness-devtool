@@ -17,7 +17,7 @@ export type ColorBlindnessFilterKind =
   | 'tritanomaly'
   | 'tritanopia'
 
-function isColorBlindnessFilterKind(
+export function isColorBlindnessFilterKind(
   kind: string,
 ): kind is ColorBlindnessFilterKind {
   return [
