@@ -114,7 +114,8 @@ export class ColorBlindnessDevtool extends LitElement {
         transform: translateY(0.3rem) rotate(180deg);
       }
 
-      .window {
+      .panel {
+        display: none;
         background: var(--background);
         border: 1px solid var(--border);
         border-radius: 0.5rem;
@@ -185,8 +186,22 @@ export class ColorBlindnessDevtool extends LitElement {
   }
 
   override disconnectedCallback() {
-    super.disconnectedCallback()
     window.removeEventListener('click', this.handleWindowClick)
+    super.disconnectedCallback()
+  }
+
+  private handleOpen() {
+    const panel = this.shadowRoot?.querySelector('.panel')
+    if (this.isOpen && panel instanceof HTMLElement) {
+      panel.style.display = 'block'
+    }
+  }
+
+  private handleClose() {
+    const panel = this.shadowRoot?.querySelector('.panel')
+    if (!this.isOpen && panel instanceof HTMLElement) {
+      panel.style.display = 'none'
+    }
   }
 
   private handleToggleButtonClick() {
@@ -204,11 +219,16 @@ export class ColorBlindnessDevtool extends LitElement {
       <color-blindness-filter kind=${this.selectedKind}>
         <slot></slot>
       </color-blindness-filter>
-      <div class="root" data-state=${this.isOpen ? 'open' : 'closed'}>
+      <div
+        class="root"
+        data-state=${this.isOpen ? 'open' : 'closed'}
+        @transitionstart=${this.handleOpen}
+        @transitionend=${this.handleClose}
+      >
         <button @click=${this.handleToggleButtonClick}>
           <color-blindness-devtool-chevron-up-icon></color-blindness-devtool-chevron-up-icon>
         </button>
-        <div class="window">
+        <div class="panel">
           <header>
             <color-blindness-devtool-logo-icon></color-blindness-devtool-logo-icon>
             <h1 class="title">Color Blindness DevTool</h1>
