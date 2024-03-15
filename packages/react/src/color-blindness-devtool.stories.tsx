@@ -1,11 +1,19 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { ColorBlindnessDevtool } from '@color-blindness-devtool/react'
+import { ColorBlindnessDevtool } from './color-blindness-devtool'
 
 const meta = {
   title: 'ColorBlindnessDevtool',
   component: ColorBlindnessDevtool,
   tags: ['autodocs'],
+  argTypes: {
+    children: {
+      table: {
+        type: { summary: 'React.ReactNode' },
+      },
+      control: { type: null },
+    },
+  },
   args: {
     children: (
       <div

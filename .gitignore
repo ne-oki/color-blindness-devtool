@@ -1,6 +1,7 @@
 node_modules/
 dist/
 .turbo/
+*storybook.log
 
 # lock files
 package-lock.json

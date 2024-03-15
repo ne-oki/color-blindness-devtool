@@ -2,8 +2,8 @@ import type { Meta, StoryObj } from '@storybook/web-components'
 import { html } from 'lit'
 import { ifDefined } from 'lit/directives/if-defined.js'
 
-import 'color-blindness-devtool'
-import { ColorBlindnessFilterKind } from 'color-blindness-devtool'
+import './color-blindness-filter'
+import { ColorBlindnessFilterKind } from './color-blindness-filter'
 
 interface ColorBlindnessFilterProps {
   kind?: ColorBlindnessFilterKind
@@ -11,6 +11,23 @@ interface ColorBlindnessFilterProps {
 
 const meta = {
   title: 'ColorBlindnessFilter',
+  tags: ['autodocs'],
+  argTypes: {
+    kind: {
+      control: { type: 'select' },
+      options: [
+        'trichromacy',
+        'achromatomaly',
+        'achromatopsia',
+        'deuteranomaly',
+        'deuteranopia',
+        'protanomaly',
+        'protanopia',
+        'tritanomaly',
+        'tritanopia',
+      ],
+    },
+  },
   render: ({ kind }) => html`
     <style>
       .rainbow-square {
