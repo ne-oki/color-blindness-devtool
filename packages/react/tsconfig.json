@@ -1,5 +1,5 @@
 {
   "extends": "@color-blindness-devtool/base-configs/tsconfig.react.json",
-  "include": ["**/*.ts", "**/*.tsx"],
+  "include": ["**/*.ts", "**/*.tsx", ".storybook/**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }

@@ -1,12 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/web-components'
 import { html } from 'lit'
 
-import 'color-blindness-devtool'
+import './color-blindness-devtool'
 
 interface ColorBlindnessDevtoolProps {}
 
 const meta = {
   title: 'ColorBlindnessDevtool',
+  tags: ['autodocs'],
   render: () => html`
     <style>
       .rainbow-square {

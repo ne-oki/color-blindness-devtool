@@ -1,11 +1,33 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { ColorBlindnessFilter } from '@color-blindness-devtool/react'
+import { ColorBlindnessFilter } from './color-blindness-filter'
 
 const meta = {
   title: 'ColorBlindnessFilter',
   component: ColorBlindnessFilter,
   tags: ['autodocs'],
+  argTypes: {
+    kind: {
+      control: { type: 'select' },
+      options: [
+        'trichromacy',
+        'achromatomaly',
+        'achromatopsia',
+        'deuteranomaly',
+        'deuteranopia',
+        'protanomaly',
+        'protanopia',
+        'tritanomaly',
+        'tritanopia',
+      ],
+    },
+    children: {
+      table: {
+        type: { summary: 'React.ReactNode' },
+      },
+      control: { type: null },
+    },
+  },
   args: {
     children: (
       <div
