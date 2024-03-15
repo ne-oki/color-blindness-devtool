@@ -7,7 +7,7 @@ import './chevron-up-icon'
 import './color-blindness-filter'
 import { ColorBlindnessFilterKind } from './color-blindness-filter'
 import './github-icon'
-import './logo-icon'
+import './logo'
 import { resetStyles } from './reset-styles'
 
 interface CardItem {
@@ -105,11 +105,6 @@ export class ColorBlindnessDevtool extends LitElement {
         transition: transform 0.35s;
       }
 
-      color-blindness-devtool-chevron-up-icon::part(icon) {
-        width: 1.5rem;
-        height: 1.5rem;
-      }
-
       .root[data-state='open'] color-blindness-devtool-chevron-up-icon {
         transform: translateY(0.3rem) rotate(180deg);
       }
@@ -127,7 +122,7 @@ export class ColorBlindnessDevtool extends LitElement {
       header {
         display: flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: 0.75rem;
       }
 
       header > a {
@@ -147,11 +142,8 @@ export class ColorBlindnessDevtool extends LitElement {
           monospace;
       }
 
-      color-blindness-devtool-logo-icon,
-      color-blindness-devtool-github-icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+      color-blindness-devtool-logo::part(img) {
+        width: 16rem;
       }
 
       color-blindness-devtool-github-icon {
@@ -230,8 +222,7 @@ export class ColorBlindnessDevtool extends LitElement {
         </button>
         <div class="panel">
           <header>
-            <color-blindness-devtool-logo-icon></color-blindness-devtool-logo-icon>
-            <h1 class="title">Color Blindness DevTool</h1>
+            <color-blindness-devtool-logo></color-blindness-devtool-logo>
             <span class="version">${packageJson.version}</span>
             <a
               href="https://github.com/neokidev/color-blindness-devtool"

@@ -15,7 +15,6 @@ export class ChevronUpIcon extends LitElement {
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        part="icon"
       >
         <path d="m18 15-6-6-6 6" />
       </svg>

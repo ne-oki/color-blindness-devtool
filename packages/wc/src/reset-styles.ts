@@ -29,7 +29,6 @@ export const resetStyles = css`
   p {
     margin: 0;
   }
-  h1,
   h3 {
     font-size: inherit;
     font-weight: inherit;
