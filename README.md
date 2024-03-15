@@ -1,3 +1,5 @@
+<img src="header.png" />
+
 # Color Blindness DevTool
 
 [![ci](https://github.com/neokidev/color-blindness-devtool/actions/workflows/ci.yml/badge.svg)](https://github.com/neokidev/color-blindness-devtool/actions/workflows/ci.yml)
