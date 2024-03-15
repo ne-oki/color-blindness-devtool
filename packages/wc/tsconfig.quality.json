@@ -1,5 +1,0 @@
-{
-  "extends": "@color-blindness-devtool/base-configs/tsconfig.quality.json",
-  "include": ["**/*.ts"],
-  "exclude": ["node_modules", "dist"]
-}

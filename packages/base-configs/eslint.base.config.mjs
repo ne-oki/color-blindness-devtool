@@ -15,7 +15,7 @@ export default [
       sourceType: 'module',
       globals: { ...globals.browser },
       parserOptions: {
-        project: './tsconfig.quality.json',
+        project: './tsconfig.json',
       },
     },
   }),

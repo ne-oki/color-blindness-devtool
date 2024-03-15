@@ -17,18 +17,19 @@
     "dist"
   ],
   "scripts": {
-    "build": "npm run compile",
-    "clean": "rimraf dist",
-    "compile": "tsc",
-    "compile:watch": "tsc --watch"
+    "build": "npm run bundle",
+    "bundle": "tsup",
+    "bundle:watch": "tsup --watch",
+    "clean": "rimraf dist"
   },
   "dependencies": {
-    "@lit/react": "^1.0.3",
     "@color-blindness-devtool/base-configs": "*",
+    "@lit/react": "^1.0.3",
     "color-blindness-devtool": "*"
   },
   "devDependencies": {
     "rimraf": "^5.0.5",
+    "tsup": "^8.0.2",
     "typescript": "^5.3.3"
   },
   "peerDependencies": {
