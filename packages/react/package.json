@@ -22,7 +22,8 @@
     "bundle:watch": "tsup --watch",
     "clean": "rimraf dist",
     "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
+    "lint:fix": "npm run lint:eslint:fix",
+    "lint:eslint:fix": "eslint --fix .",
     "storybook": "storybook dev -p 7007",
     "storybook:build": "storybook build"
   },

@@ -2,11 +2,6 @@ import { css } from 'lit'
 
 export const resetStyles = css`
   :host {
-    line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: transparent;
-    font-size: 0.875rem;
-    font-weight: 400;
     font-family:
       ui-sans-serif,
       system-ui,
@@ -22,56 +17,69 @@ export const resetStyles = css`
       'Segoe UI Emoji',
       'Segoe UI Symbol',
       'Noto Color Emoji';
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.15;
+    text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
   }
+
   main {
     display: block;
   }
+
   p {
     margin: 0;
   }
+
   h3 {
+    margin: 0;
     font-size: inherit;
     font-weight: inherit;
-    margin: 0;
   }
+
   ul {
-    margin: 0;
     padding: 0;
+    margin: 0;
     list-style: none;
   }
+
   hr {
     box-sizing: content-box;
     height: 0;
-    overflow: visible;
-    border-top-width: 1px;
     margin: 0;
+    overflow: visible;
     clear: both;
     color: inherit;
+    border-top-width: 1px;
   }
+
   a {
-    background-color: transparent;
+    color: inherit;
     text-decoration: none;
-    color: inherit;
+    background-color: transparent;
   }
+
   button {
-    -webkit-appearance: none;
-    appearance: none;
-    vertical-align: middle;
-    color: inherit;
-    font: inherit;
-    background: transparent;
     padding: 0;
     margin: 0;
-    border-radius: 0;
+    font: inherit;
+    color: inherit;
     text-align: inherit;
     text-transform: inherit;
+    vertical-align: middle;
+    appearance: none;
+    background: transparent;
+    border-radius: 0;
   }
+
   button,
   [type='button'],
   [type='reset'],
   [type='submit'] {
     cursor: pointer;
   }
+
   button:disabled,
   [type='button']:disabled,
   [type='reset']:disabled,

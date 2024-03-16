@@ -59,6 +59,14 @@ export const filterMatrixValues: Record<
 export class ColorBlindnessFilter extends LitElement {
   private readonly filterId = `color-blindness-filter__filter-${randomId()}`
 
+  static override styles = css`
+    .svg {
+      position: absolute;
+      width: 0;
+      height: 0;
+    }
+  `
+
   @property({
     converter: (value) => {
       if (value === null || !isColorBlindnessFilterKind(value)) {
@@ -69,22 +77,14 @@ export class ColorBlindnessFilter extends LitElement {
   })
   kind: ColorBlindnessFilterKind = 'trichromacy'
 
-  static override styles = css`
-    .color-blindness-filter__svg {
-      width: 0;
-      height: 0;
-      position: absolute;
-    }
-  `
-
   override render() {
     return html`
       <style>
-        .color-blindness-filter__content-container {
+        .content-root {
           filter: url(#${this.filterId});
         }
       </style>
-      <svg class="color-blindness-filter__svg">
+      <svg class="svg">
         <defs>
           <filter id=${this.filterId}>
             <feColorMatrix
@@ -98,7 +98,7 @@ export class ColorBlindnessFilter extends LitElement {
           </filter>
         </defs>
       </svg>
-      <div class="color-blindness-filter__content-container">
+      <div class="content-root">
         <slot></slot>
       </div>
     `
