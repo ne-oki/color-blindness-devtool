@@ -16,19 +16,19 @@ export class Card extends LitElement {
     resetStyles,
     css`
       p {
-        color: var(--muted);
         font-size: 0.75rem;
+        color: var(--muted);
       }
 
       button {
+        display: flex;
+        flex-direction: column;
         width: 100%;
+        overflow: hidden;
+        color: white;
         background: var(--background);
         border: 2px solid var(--border);
         border-radius: 0.25rem;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
       }
 
       button.active {
@@ -46,25 +46,25 @@ export class Card extends LitElement {
         height: 5rem;
         background: linear-gradient(
           to right,
-          rgb(255, 81, 47) 1.7%,
-          rgb(255, 167, 47) 8.2%,
-          rgb(218, 253, 1) 16.2%,
-          rgb(98, 234, 20) 23.4%,
-          rgb(69, 193, 42) 32.8%,
-          rgb(7, 249, 149) 43.7%,
-          rgb(6, 200, 217) 55.3%,
-          rgb(18, 51, 233) 65.5%,
-          rgb(122, 59, 202) 74.5%,
-          rgb(231, 7, 249) 82.3%,
-          rgb(202, 59, 163) 91.4%
+          rgb(255 81 47) 1.7%,
+          rgb(255 167 47) 8.2%,
+          rgb(218 253 1) 16.2%,
+          rgb(98 234 20) 23.4%,
+          rgb(69 193 42) 32.8%,
+          rgb(7 249 149) 43.7%,
+          rgb(6 200 217) 55.3%,
+          rgb(18 51 233) 65.5%,
+          rgb(122 59 202) 74.5%,
+          rgb(231 7 249) 82.3%,
+          rgb(202 59 163) 91.4%
         );
       }
 
       .content {
         display: flex;
         flex-direction: column;
-        padding: 0.5rem;
         gap: 0.25rem;
+        padding: 0.5rem;
       }
     `,
   ]

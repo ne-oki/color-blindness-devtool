@@ -41,14 +41,14 @@ export class ColorBlindnessDevtool extends LitElement {
       }
 
       h1 {
-        font-weight: 700;
         font-size: 1.25rem;
+        font-weight: 700;
       }
 
       ul {
         display: grid;
-        gap: 0.5rem;
         grid-template-columns: 1fr 1fr 1fr;
+        gap: 0.5rem;
       }
 
       hr {
@@ -58,27 +58,29 @@ export class ColorBlindnessDevtool extends LitElement {
 
       button {
         position: absolute;
+        top: calc(-2rem + 1px);
+        left: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 4rem;
         height: 2rem;
-        left: 50%;
-        transform: translateX(-50%);
-        top: calc(-2rem + 1px);
         background: var(--background);
         border: 1px solid var(--border);
         border-bottom: none;
         border-radius: 50% / 100% 100% 0 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        transform: translateX(-50%);
       }
 
       @keyframes overshoot {
         0% {
           transform: translateX(-50%) translateY(100%);
         }
+
         70% {
           transform: translateX(-50%) translateY(-2rem);
         }
+
         100% {
           transform: translateX(-50%) translateY(-1rem);
         }
@@ -89,8 +91,8 @@ export class ColorBlindnessDevtool extends LitElement {
         bottom: 0;
         left: 50%;
         z-index: calc(infinity);
-        transform: translateX(-50%) translateY(100%);
         transition: transform 0.35s;
+        transform: translateX(-50%) translateY(100%);
         animation-fill-mode: forwards;
       }
 
@@ -101,8 +103,8 @@ export class ColorBlindnessDevtool extends LitElement {
 
       color-blindness-devtool-chevron-up-icon {
         color: var(--muted);
-        transform: translateY(0.3rem);
         transition: transform 0.35s;
+        transform: translateY(0.3rem);
       }
 
       .root[data-state='open'] color-blindness-devtool-chevron-up-icon {
@@ -111,18 +113,18 @@ export class ColorBlindnessDevtool extends LitElement {
 
       .panel {
         display: none;
+        width: 36rem;
+        padding: 1rem;
+        color: white;
         background: var(--background);
         border: 1px solid var(--border);
         border-radius: 0.5rem;
-        padding: 1rem;
-        color: white;
-        width: 36rem;
       }
 
       header {
         display: flex;
-        align-items: center;
         gap: 0.75rem;
+        align-items: center;
       }
 
       header > a {
@@ -130,16 +132,9 @@ export class ColorBlindnessDevtool extends LitElement {
       }
 
       .version {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+          'Liberation Mono', 'Courier New', monospace;
         color: var(--muted);
-        font-family:
-          ui-monospace,
-          SFMono-Regular,
-          Menlo,
-          Monaco,
-          Consolas,
-          Liberation Mono,
-          Courier New,
-          monospace;
       }
 
       color-blindness-devtool-logo::part(img) {
