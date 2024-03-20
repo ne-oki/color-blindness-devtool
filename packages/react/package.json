@@ -22,19 +22,19 @@
     "bundle:watch": "tsup --watch",
     "clean": "rimraf dist",
     "lint": "eslint .",
-    "lint:fix": "npm run lint:eslint:fix",
     "lint:eslint:fix": "eslint --fix .",
+    "lint:fix": "npm run lint:eslint:fix",
     "storybook": "storybook dev -p 7007",
     "storybook:build": "storybook build"
   },
   "dependencies": {
-    "@color-blindness-devtool/base-configs": "*",
-    "@color-blindness-devtool/eslint-config": "*",
     "@lit/react": "^1.0.3",
     "color-blindness-devtool": "*"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.2.20",
+    "@color-blindness-devtool/base-configs": "*",
+    "@color-blindness-devtool/eslint-config": "*",
     "@storybook/addon-essentials": "^8.0.0",
     "@storybook/addon-interactions": "^8.0.0",
     "@storybook/addon-links": "^8.0.0",
