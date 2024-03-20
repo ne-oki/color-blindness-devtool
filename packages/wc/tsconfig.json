@@ -1,5 +1,8 @@
 {
   "extends": "@color-blindness-devtool/base-configs/tsconfig.base.json",
-  "include": ["**/*.ts", ".storybook/**/*.ts"],
+  "compilerOptions": {
+    "outDir": "dist"
+  },
+  "include": ["src", ".storybook"],
   "exclude": ["node_modules", "dist"]
 }

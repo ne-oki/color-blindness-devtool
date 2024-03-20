@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "@color-blindness-devtool/base-configs": "*",
+    "@color-blindness-devtool/eslint-config": "*",
     "@lit/react": "^1.0.3",
     "color-blindness-devtool": "*"
   },
