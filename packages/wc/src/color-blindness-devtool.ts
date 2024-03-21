@@ -146,7 +146,12 @@ export class ColorBlindnessDevtool extends LitElement {
       }
 
       color-blindness-devtool-github-icon:hover {
-        color: white;
+        opacity: 0.75;
+      }
+
+      color-blindness-devtool-github-icon::part(img) {
+        width: 1.5rem;
+        height: 1.5rem;
       }
     `,
   ]
