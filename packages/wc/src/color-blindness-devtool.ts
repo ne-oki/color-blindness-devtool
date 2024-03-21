@@ -98,7 +98,7 @@ export class ColorBlindnessDevtool extends LitElement {
 
       .root[data-state='open'] {
         transform: translateX(-50%) translateY(-1rem);
-        animation: overshoot 0.45s ease-in-out;
+        animation: overshoot 0.375s ease-in-out;
       }
 
       color-blindness-devtool-chevron-up-icon {
