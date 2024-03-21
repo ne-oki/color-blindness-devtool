@@ -1,5 +1,5 @@
 import { LitElement, css, html } from 'lit'
-import { customElement, state } from 'lit/decorators.js'
+import { customElement, property, state } from 'lit/decorators.js'
 
 import packageJson from '../package.json'
 import './card'
@@ -162,6 +162,9 @@ export class ColorBlindnessDevtool extends LitElement {
   @state()
   private selectedKind: ColorBlindnessFilterKind = 'trichromacy'
 
+  @property({ type: Boolean })
+  disabled: boolean = false
+
   private handleWindowClick = (event: MouseEvent) => {
     if (
       this.isOpen &&
@@ -207,6 +210,10 @@ export class ColorBlindnessDevtool extends LitElement {
   }
 
   override render() {
+    if (this.disabled) {
+      return html`<slot></slot>`
+    }
+
     return html`
       <color-blindness-filter kind=${this.selectedKind}>
         <slot></slot>

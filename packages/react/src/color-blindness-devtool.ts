@@ -3,7 +3,9 @@ import * as React from 'react'
 
 import { ColorBlindnessDevtool as ColorBlindnessDevtoolWC } from 'color-blindness-devtool'
 
-export interface ColorBlindnessDevtoolProps extends React.PropsWithChildren {}
+export interface ColorBlindnessDevtoolProps extends React.PropsWithChildren {
+  disabled?: boolean
+}
 
 export const ColorBlindnessDevtool = createComponent({
   react: React,

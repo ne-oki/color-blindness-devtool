@@ -3,12 +3,14 @@ import { html } from 'lit'
 
 import './color-blindness-devtool'
 
-interface ColorBlindnessDevtoolProps {}
+interface ColorBlindnessDevtoolProps {
+  disabled?: boolean
+}
 
 const meta = {
   title: 'ColorBlindnessDevtool',
   tags: ['autodocs'],
-  render: () => html`
+  render: ({ disabled }) => html`
     <style>
       .rainbow-square {
         width: 100%;
@@ -25,7 +27,7 @@ const meta = {
         );
       }
     </style>
-    <color-blindness-devtool>
+    <color-blindness-devtool ?disabled=${disabled}>
       <div class="rainbow-square"></div>
     </color-blindness-devtool>
   `,
@@ -36,4 +38,10 @@ type Story = StoryObj<ColorBlindnessDevtoolProps>
 
 export const Default: Story = {
   args: {},
+}
+
+export const Disabled: Story = {
+  args: {
+    disabled: true,
+  },
 }

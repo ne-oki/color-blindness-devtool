@@ -100,4 +100,17 @@ describe('color-blindness-devtool', () => {
     const filter = devtool.shadowRoot!.querySelector('color-blindness-filter')!
     expect(filter.getAttribute('kind')).toBe('deuteranomaly')
   })
+
+  it('disables the devtool when the disabled attribute is set', async () => {
+    document.body.innerHTML =
+      '<color-blindness-devtool disabled></color-blindness-devtool>'
+    await customElements.whenDefined('color-blindness-devtool')
+
+    const devtool = document.body.querySelector('color-blindness-devtool')!
+    const filter = devtool.shadowRoot!.querySelector('color-blindness-filter')!
+    const toggleButton = devtool.shadowRoot!.querySelector('button')!
+
+    expect(filter).toBeNull()
+    expect(toggleButton).toBeNull()
+  })
 })
