@@ -1,7 +1,6 @@
 {
   "name": "@color-blindness-devtool/react",
   "version": "0.0.0",
-  "private": true,
   "description": "A React component with TypeScript and Lit",
   "keywords": [
     "react",
@@ -29,7 +28,7 @@
   },
   "dependencies": {
     "@lit/react": "^1.0.3",
-    "color-blindness-devtool": "*"
+    "color-blindness-devtool": "^0.0.0"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.2.20",
@@ -52,5 +51,8 @@
   },
   "peerDependencies": {
     "react": "^18.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

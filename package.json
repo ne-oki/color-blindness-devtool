@@ -12,6 +12,7 @@
     "lint": "turbo lint",
     "lint:fix": "turbo lint:fix",
     "prepare": "lefthook install",
+    "publish": "npm run clean && npm run build && changeset publish",
     "quality": "npm run format:check && npm run lint && npm run type-check && npm run test",
     "storybook": "wait-on http://localhost:7007 && npm run storybook:wc & npm run storybook:react:no-open",
     "storybook:react": "cd packages/react && npm run storybook",
