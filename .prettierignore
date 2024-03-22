@@ -1,6 +1,7 @@
 node_modules/
 dist/
 storybook-static/
+.changeset/*.md
 
 # lock files
 package-lock.json
