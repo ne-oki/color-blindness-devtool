@@ -1,5 +1,5 @@
 export { ColorBlindnessDevtool } from './color-blindness-devtool'
 export {
   ColorBlindnessFilter,
-  ColorBlindnessFilterKind,
+  type ColorBlindnessFilterKind,
 } from './color-blindness-filter'

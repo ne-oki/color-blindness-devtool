@@ -16,9 +16,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "npm run bundle",
-    "bundle": "tsup",
-    "bundle:watch": "tsup --watch",
+    "build": "tsc && vite build",
     "clean": "rimraf dist",
     "lint": "eslint .",
     "lint:eslint:fix": "eslint --fix .",
@@ -31,23 +29,24 @@
     "color-blindness-devtool": "^0.0.1"
   },
   "devDependencies": {
-    "@chromatic-com/storybook": "^1.2.20",
+    "@chromatic-com/storybook": "^1.2.25",
     "@color-blindness-devtool/base-configs": "*",
     "@color-blindness-devtool/eslint-config": "*",
-    "@storybook/addon-essentials": "^8.0.0",
-    "@storybook/addon-interactions": "^8.0.0",
-    "@storybook/addon-links": "^8.0.0",
-    "@storybook/addon-onboarding": "^8.0.0",
-    "@storybook/blocks": "^8.0.0",
-    "@storybook/react": "^8.0.0",
-    "@storybook/react-vite": "^8.0.0",
-    "@storybook/test": "^8.0.0",
-    "@types/eslint": "^8.56.5",
+    "@storybook/addon-essentials": "^8.0.4",
+    "@storybook/addon-interactions": "^8.0.4",
+    "@storybook/addon-links": "^8.0.4",
+    "@storybook/addon-onboarding": "^8.0.4",
+    "@storybook/blocks": "^8.0.4",
+    "@storybook/react": "^8.0.4",
+    "@storybook/react-vite": "^8.0.4",
+    "@storybook/test": "^8.0.4",
+    "@types/eslint": "^8.56.6",
     "eslint": "^8.57.0",
     "rimraf": "^5.0.5",
-    "storybook": "^8.0.0",
-    "tsup": "^8.0.2",
-    "typescript": "^5.3.3"
+    "storybook": "^8.0.4",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vite-plugin-dts": "^3.7.3"
   },
   "peerDependencies": {
     "react": "^18.0.0"
