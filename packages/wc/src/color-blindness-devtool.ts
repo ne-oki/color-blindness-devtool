@@ -40,20 +40,33 @@ export class ColorBlindnessDevtool extends LitElement {
         --muted: #bfc1c9;
       }
 
-      h1 {
-        font-size: 1.25rem;
-        font-weight: 700;
+      @keyframes overshoot {
+        0% {
+          transform: translateX(-50%) translateY(100%);
+        }
+
+        70% {
+          transform: translateX(-50%) translateY(-2rem);
+        }
+
+        100% {
+          transform: translateX(-50%) translateY(-1rem);
+        }
       }
 
-      ul {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 0.5rem;
+      .container {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        z-index: calc(infinity);
+        transition: transform 0.35s;
+        transform: translateX(-50%) translateY(100%);
+        animation-fill-mode: forwards;
       }
 
-      hr {
-        margin: 1rem 0;
-        border: 1px solid var(--rule);
+      .container[data-state='open'] {
+        transform: translateX(-50%) translateY(-1rem);
+        animation: overshoot 0.375s ease-in-out;
       }
 
       button {
@@ -72,42 +85,13 @@ export class ColorBlindnessDevtool extends LitElement {
         transform: translateX(-50%);
       }
 
-      @keyframes overshoot {
-        0% {
-          transform: translateX(-50%) translateY(100%);
-        }
-
-        70% {
-          transform: translateX(-50%) translateY(-2rem);
-        }
-
-        100% {
-          transform: translateX(-50%) translateY(-1rem);
-        }
-      }
-
-      .root {
-        position: fixed;
-        bottom: 0;
-        left: 50%;
-        z-index: calc(infinity);
-        transition: transform 0.35s;
-        transform: translateX(-50%) translateY(100%);
-        animation-fill-mode: forwards;
-      }
-
-      .root[data-state='open'] {
-        transform: translateX(-50%) translateY(-1rem);
-        animation: overshoot 0.375s ease-in-out;
-      }
-
       color-blindness-devtool-chevron-up-icon {
         color: var(--muted);
         transition: transform 0.35s;
         transform: translateY(0.3rem);
       }
 
-      .root[data-state='open'] color-blindness-devtool-chevron-up-icon {
+      .container[data-state='open'] color-blindness-devtool-chevron-up-icon {
         transform: translateY(0.3rem) rotate(180deg);
       }
 
@@ -127,8 +111,8 @@ export class ColorBlindnessDevtool extends LitElement {
         align-items: center;
       }
 
-      header > a {
-        margin-left: auto;
+      color-blindness-devtool-logo::part(img) {
+        width: 16rem;
       }
 
       .version {
@@ -137,8 +121,8 @@ export class ColorBlindnessDevtool extends LitElement {
         color: var(--muted);
       }
 
-      color-blindness-devtool-logo::part(img) {
-        width: 16rem;
+      .github-link {
+        margin-left: auto;
       }
 
       color-blindness-devtool-github-icon {
@@ -152,6 +136,17 @@ export class ColorBlindnessDevtool extends LitElement {
       color-blindness-devtool-github-icon::part(img) {
         width: 1.5rem;
         height: 1.5rem;
+      }
+
+      hr {
+        margin: 1rem 0;
+        border: 1px solid var(--rule);
+      }
+
+      ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0.5rem;
       }
     `,
   ]
@@ -219,7 +214,7 @@ export class ColorBlindnessDevtool extends LitElement {
         <slot></slot>
       </color-blindness-filter>
       <div
-        class="root"
+        class="container"
         data-state=${this.isOpen ? 'open' : 'closed'}
         @transitionstart=${this.handleOpen}
         @transitionend=${this.handleClose}
@@ -232,6 +227,7 @@ export class ColorBlindnessDevtool extends LitElement {
             <color-blindness-devtool-logo></color-blindness-devtool-logo>
             <span class="version">${packageJson.version}</span>
             <a
+              class="github-link"
               href="https://github.com/neokidev/color-blindness-devtool"
               target="_blank"
               rel="noopener noreferrer"
