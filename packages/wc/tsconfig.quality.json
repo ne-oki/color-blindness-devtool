@@ -1,5 +1,5 @@
 {
-  "extends": "@color-blindness-devtool/base-configs/tsconfig.lit.json",
+  "extends": "@color-blindness-devtool/base-configs/tsconfig.base.json",
   "compilerOptions": {
     "outDir": "dist"
   },
