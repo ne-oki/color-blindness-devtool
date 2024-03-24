@@ -1,6 +1,6 @@
 import { LitElement, css, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
-import { classMap } from 'lit/directives/class-map.js'
+import { ifDefined } from 'lit/directives/if-defined.js'
 
 import './color-blindness-filter'
 import { ColorBlindnessFilterKind } from './color-blindness-filter'
@@ -85,9 +85,11 @@ export class Card extends LitElement {
   }
 
   override render() {
+    // NOTE: `ifDefined(...)` is used instead of `classMap({ active: this.active })`.
+    //  `classMap(...)` is simpler but fails to display correctly due to Vite build issues.
     return html`
       <button
-        class=${classMap({ active: this.active })}
+        class=${ifDefined(this.active ? 'active' : undefined)}
         @click=${this.handleClick}
       >
         <color-blindness-filter kind=${this.kind}>
