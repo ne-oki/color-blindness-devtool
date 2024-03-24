@@ -1,7 +1,7 @@
 import { LitElement, css, html } from 'lit'
 import { customElement, property, state } from 'lit/decorators.js'
 
-import packageJson from '../package.json'
+import { version } from '../package.json'
 import './card'
 import './chevron-up-icon'
 import './color-blindness-filter'
@@ -225,7 +225,7 @@ export class ColorBlindnessDevtool extends LitElement {
         <div class="panel">
           <header>
             <color-blindness-devtool-logo></color-blindness-devtool-logo>
-            <span class="version">${packageJson.version}</span>
+            <span class="version">${version}</span>
             <a
               class="github-link"
               href="https://github.com/neokidev/color-blindness-devtool"
