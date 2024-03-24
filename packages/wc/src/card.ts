@@ -15,11 +15,6 @@ export class Card extends LitElement {
   static override styles = [
     resetStyles,
     css`
-      p {
-        font-size: 0.75rem;
-        color: var(--muted);
-      }
-
       button {
         display: flex;
         flex-direction: column;
@@ -66,6 +61,12 @@ export class Card extends LitElement {
         gap: 0.25rem;
         align-items: flex-start;
         padding: 0.5rem;
+        font-weight: 500;
+      }
+
+      p {
+        font-size: 0.75rem;
+        color: var(--muted);
       }
     `,
   ]

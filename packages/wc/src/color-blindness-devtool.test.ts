@@ -25,7 +25,7 @@ describe('color-blindness-devtool', () => {
     await user.click(toggleButton)
     await devtool.updateComplete
 
-    const root = devtool.shadowRoot!.querySelector('.root')!
+    const root = devtool.shadowRoot!.querySelector('.container')!
     expect(root.getAttribute('data-state')).toBe('open')
   })
 
@@ -43,7 +43,7 @@ describe('color-blindness-devtool', () => {
     await user.click(toggleButton)
     await devtool.updateComplete
 
-    const root = devtool.shadowRoot!.querySelector('.root')!
+    const root = devtool.shadowRoot!.querySelector('.container')!
     expect(root.getAttribute('data-state')).toBe('closed')
   })
 
@@ -61,7 +61,7 @@ describe('color-blindness-devtool', () => {
     await user.click(document.body)
     await devtool.updateComplete
 
-    const root = devtool.shadowRoot!.querySelector('.root')!
+    const root = devtool.shadowRoot!.querySelector('.container')!
     expect(root.getAttribute('data-state')).toBe('closed')
   })
 
