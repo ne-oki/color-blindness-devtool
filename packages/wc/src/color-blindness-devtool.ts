@@ -160,24 +160,30 @@ export class ColorBlindnessDevtool extends LitElement {
   @property({ type: Boolean })
   disabled: boolean = false
 
-  private handleWindowClick = (event: MouseEvent) => {
-    if (
-      this.isOpen &&
-      event.target instanceof HTMLElement &&
-      !event.target.closest('color-blindness-devtool')
-    ) {
+  private containerElement: HTMLElement | null = null
+
+  private handleClickOutside = (event: MouseEvent) => {
+    const isClickOutside = !event
+      .composedPath()
+      .some((element) => element === this.containerElement)
+
+    if (this.isOpen && isClickOutside) {
       this.isOpen = false
     }
   }
 
   override connectedCallback() {
     super.connectedCallback()
-    window.addEventListener('click', this.handleWindowClick)
+    window.addEventListener('click', this.handleClickOutside)
   }
 
   override disconnectedCallback() {
-    window.removeEventListener('click', this.handleWindowClick)
+    window.removeEventListener('click', this.handleClickOutside)
     super.disconnectedCallback()
+  }
+
+  override firstUpdated() {
+    this.containerElement = this.shadowRoot!.querySelector('.container')
   }
 
   private handleOpen() {
