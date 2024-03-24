@@ -19,11 +19,13 @@
     "clean": "rimraf index.js",
     "dev": "vite"
   },
+  "dependencies": {
+    "color-blindness-devtool": "^0.0.5"
+  },
   "devDependencies": {
     "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-replace": "^5.0.5",
-    "color-blindness-devtool": "*",
     "rimraf": "^5.0.5",
     "rollup": "^2.79.1",
     "rollup-plugin-summary": "^2.0.0",
