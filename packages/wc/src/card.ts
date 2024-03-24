@@ -64,6 +64,7 @@ export class Card extends LitElement {
         display: flex;
         flex-direction: column;
         gap: 0.25rem;
+        align-items: flex-start;
         padding: 0.5rem;
       }
     `,
