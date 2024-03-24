@@ -1,5 +1,13 @@
 # color-blindness-devtool
 
+## 0.0.4
+
+### Patch Changes
+
+- [#28](https://github.com/neokidev/color-blindness-devtool/pull/28) [`20f9e75`](https://github.com/neokidev/color-blindness-devtool/commit/20f9e7542f04bc3606cc7b2a5b4c8020f568409c) Thanks [@neokidev](https://github.com/neokidev)! - Tidy up styles
+
+- [#30](https://github.com/neokidev/color-blindness-devtool/pull/30) [`bd203e8`](https://github.com/neokidev/color-blindness-devtool/commit/bd203e8167ed5ffb9106add1f85a1f60332250c5) Thanks [@neokidev](https://github.com/neokidev)! - Improve importing package.json
+
 ## 0.0.3
 
 ### Patch Changes

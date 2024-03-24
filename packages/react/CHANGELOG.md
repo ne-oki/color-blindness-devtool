@@ -1,5 +1,12 @@
 # @color-blindness-devtool/react
 
+## 0.0.4
+
+### Patch Changes
+
+- Updated dependencies [[`20f9e75`](https://github.com/neokidev/color-blindness-devtool/commit/20f9e7542f04bc3606cc7b2a5b4c8020f568409c), [`bd203e8`](https://github.com/neokidev/color-blindness-devtool/commit/bd203e8167ed5ffb9106add1f85a1f60332250c5)]:
+  - color-blindness-devtool@0.0.4
+
 ## 0.0.3
 
 ### Patch Changes
