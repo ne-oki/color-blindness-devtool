@@ -16,7 +16,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc && vite build",
+    "build": "tsc",
     "clean": "rimraf dist",
     "lint": "eslint .",
     "lint:eslint:fix": "eslint --fix .",
@@ -44,9 +44,7 @@
     "eslint": "^8.57.0",
     "rimraf": "^5.0.5",
     "storybook": "^8.0.4",
-    "typescript": "^5.2.2",
-    "vite": "^5.2.0",
-    "vite-plugin-dts": "^3.7.3"
+    "typescript": "^5.2.2"
   },
   "peerDependencies": {
     "react": "^18.0.0"
