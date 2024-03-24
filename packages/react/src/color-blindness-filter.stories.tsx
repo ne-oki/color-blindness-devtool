@@ -35,7 +35,7 @@ const meta = {
           width: '100%',
           height: '8rem',
           background:
-            'linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet)',
+            'linear-gradient(to right, red, orange, yellow, green, blue, purple)',
         }}
       />
     ),

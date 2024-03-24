@@ -30,7 +30,7 @@ const meta = {
   },
   render: ({ kind }) => html`
     <style>
-      .rainbow-square {
+      .preview {
         width: 100%;
         height: 8rem;
         background: linear-gradient(
@@ -40,13 +40,12 @@ const meta = {
           yellow,
           green,
           blue,
-          indigo,
-          violet
+          purple
         );
       }
     </style>
     <color-blindness-filter kind=${ifDefined(kind)}>
-      <div class="rainbow-square"></div>
+      <div class="preview"></div>
     </color-blindness-filter>
   `,
 } satisfies Meta<ColorBlindnessFilterProps>

@@ -12,7 +12,7 @@ const meta = {
   tags: ['autodocs'],
   render: ({ disabled }) => html`
     <style>
-      .rainbow-square {
+      .preview {
         width: 100%;
         height: 8rem;
         background: linear-gradient(
@@ -22,13 +22,12 @@ const meta = {
           yellow,
           green,
           blue,
-          indigo,
-          violet
+          purple
         );
       }
     </style>
     <color-blindness-devtool ?disabled=${disabled}>
-      <div class="rainbow-square"></div>
+      <div class="preview"></div>
     </color-blindness-devtool>
   `,
 } satisfies Meta<ColorBlindnessDevtoolProps>

@@ -41,17 +41,23 @@ export class Card extends LitElement {
         height: 5rem;
         background: linear-gradient(
           to right,
-          rgb(255 81 47) 1.7%,
-          rgb(255 167 47) 8.2%,
-          rgb(218 253 1) 16.2%,
-          rgb(98 234 20) 23.4%,
-          rgb(69 193 42) 32.8%,
-          rgb(7 249 149) 43.7%,
-          rgb(6 200 217) 55.3%,
-          rgb(18 51 233) 65.5%,
-          rgb(122 59 202) 74.5%,
-          rgb(231 7 249) 82.3%,
-          rgb(202 59 163) 91.4%
+          #f00,
+          #f50,
+          #fa0,
+          #ff0,
+          #af0,
+          #0f0,
+          #0f5,
+          #0fa,
+          #0ff,
+          #0af,
+          #05f,
+          #00f,
+          #50f,
+          #a0f,
+          #f0f,
+          #f0a,
+          #f05
         );
       }
 
