@@ -1,5 +1,13 @@
 # color-blindness-devtool
 
+## 0.0.3
+
+### Patch Changes
+
+- [#27](https://github.com/neokidev/color-blindness-devtool/pull/27) [`9c10e64`](https://github.com/neokidev/color-blindness-devtool/commit/9c10e647026fbc61facd993197cfd7b182d3743d) Thanks [@neokidev](https://github.com/neokidev)! - Fix card styles
+
+- [#25](https://github.com/neokidev/color-blindness-devtool/pull/25) [`e4a6579`](https://github.com/neokidev/color-blindness-devtool/commit/e4a657931463cee451f8cf626232c5dc3cc9b3d6) Thanks [@neokidev](https://github.com/neokidev)! - Fix card component not displaying correctly after build
+
 ## 0.0.2
 
 ### Patch Changes
