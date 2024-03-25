@@ -1,9 +1,8 @@
 {
   "extends": "@color-blindness-devtool/base-configs/tsconfig.react.json",
   "compilerOptions": {
-    "outDir": "dist",
-    "rootDir": "src"
+    "noEmit": true,
+    "outDir": "dist"
   },
-  "include": ["src"],
-  "exclude": ["**/*.stories.tsx", "**/*.test.ts"]
+  "include": ["src", ".storybook/**/*"]
 }

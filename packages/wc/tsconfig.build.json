@@ -1,0 +1,9 @@
+{
+  "extends": "@color-blindness-devtool/base-configs/tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "src"
+  },
+  "include": ["src"],
+  "exclude": ["**/*.stories.ts", "**/*.test.ts"]
+}
