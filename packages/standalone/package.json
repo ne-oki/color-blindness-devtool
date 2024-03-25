@@ -1,6 +1,6 @@
 {
   "name": "@color-blindness-devtool/standalone",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "The standalone version of the Color Blindness DevTool",
   "keywords": [
     "web-components",
@@ -20,7 +20,7 @@
     "dev": "vite"
   },
   "dependencies": {
-    "color-blindness-devtool": "^0.0.5"
+    "color-blindness-devtool": "^0.0.6"
   },
   "devDependencies": {
     "@rollup/plugin-json": "^6.1.0",
