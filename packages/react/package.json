@@ -1,13 +1,23 @@
 {
   "name": "@color-blindness-devtool/react",
   "version": "0.0.6",
-  "description": "A React component with TypeScript and Lit",
+  "description": "A React component for simulating color blindness in web application development",
   "keywords": [
     "react",
     "web-components",
     "typescript",
     "lit"
   ],
+  "homepage": "https://github.com/neokidev/color-blindness-devtool#readme",
+  "bugs": {
+    "url": "https://github.com/neokidev/color-blindness-devtool/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neokidev/color-blindness-devtool.git"
+  },
+  "license": "MIT",
+  "author": "neoki",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",
