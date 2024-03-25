@@ -3,7 +3,7 @@ module.exports = {
   root: true,
   extends: ['@color-blindness-devtool/eslint-config/base.js'],
   parserOptions: {
-    project: './tsconfig.quality.json',
+    project: './tsconfig.json',
     tsconfigRootDir: __dirname,
   },
 }

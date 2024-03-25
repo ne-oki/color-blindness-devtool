@@ -16,13 +16,14 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "tsc --project tsconfig.build.json",
     "clean": "rimraf dist",
     "lint": "eslint .",
     "lint:eslint:fix": "eslint --fix .",
     "lint:fix": "npm run lint:eslint:fix",
     "storybook": "storybook dev -p 7007",
-    "storybook:build": "storybook build"
+    "storybook:build": "storybook build",
+    "type-check": "tsc"
   },
   "dependencies": {
     "@lit/react": "^1.0.3",
