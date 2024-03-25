@@ -1,6 +1,6 @@
 {
   "name": "@color-blindness-devtool/react",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A React component with TypeScript and Lit",
   "keywords": [
     "react",
@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "@lit/react": "^1.0.3",
-    "color-blindness-devtool": "^0.0.5"
+    "color-blindness-devtool": "^0.0.6"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.2.25",

@@ -1,5 +1,15 @@
 # color-blindness-devtool
 
+## 0.0.6
+
+### Patch Changes
+
+- [#38](https://github.com/neokidev/color-blindness-devtool/pull/38) [`0b73daa`](https://github.com/neokidev/color-blindness-devtool/commit/0b73daade770d6755bddd6cef0035cee937eca5d) Thanks [@neokidev](https://github.com/neokidev)! - Change linear-gradient styles
+
+- [#39](https://github.com/neokidev/color-blindness-devtool/pull/39) [`7df5381`](https://github.com/neokidev/color-blindness-devtool/commit/7df5381be89b2875c68cf9d56c5be8b0d9463fe1) Thanks [@neokidev](https://github.com/neokidev)! - Improve editor support for tsconfig
+
+- [#35](https://github.com/neokidev/color-blindness-devtool/pull/35) [`a46be31`](https://github.com/neokidev/color-blindness-devtool/commit/a46be31a5f135aed2cb7b91b397b8964cb2cf11f) Thanks [@neokidev](https://github.com/neokidev)! - Fix to close when A is clicked
+
 ## 0.0.5
 
 ### Patch Changes
