@@ -1,6 +1,6 @@
 # @color-blindness-devtool/standalone
 
-The standalone version of the Color Blindness DevTool.
+The standalone version of the devtool.
 
 For example, you can use this package when you want to use the devtool directly via CDN.
 
