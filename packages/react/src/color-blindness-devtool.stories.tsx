@@ -11,7 +11,7 @@ const meta = {
       table: {
         type: { summary: 'React.ReactNode' },
       },
-      control: { type: null },
+      control: { type: undefined },
     },
   },
   args: {

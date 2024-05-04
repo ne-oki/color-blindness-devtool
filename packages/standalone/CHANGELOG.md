@@ -15,7 +15,7 @@
 
 ### Patch Changes
 
-- [#37](https://github.com/neokidev/color-blindness-devtool/pull/37) [`abf182c`](https://github.com/neokidev/color-blindness-devtool/commit/abf182c17854b18752495ad70c58f5a4d53a11d4) Thanks [@neokidev](https://github.com/neokidev)! - Change the way dependencies are written
+- [#37](https://github.com/ne-oki/color-blindness-devtool/pull/37) [`abf182c`](https://github.com/ne-oki/color-blindness-devtool/commit/abf182c17854b18752495ad70c58f5a4d53a11d4) Thanks [@ne-oki](https://github.com/ne-oki)! - Change the way dependencies are written
 
-- Updated dependencies [[`0b73daa`](https://github.com/neokidev/color-blindness-devtool/commit/0b73daade770d6755bddd6cef0035cee937eca5d), [`7df5381`](https://github.com/neokidev/color-blindness-devtool/commit/7df5381be89b2875c68cf9d56c5be8b0d9463fe1), [`a46be31`](https://github.com/neokidev/color-blindness-devtool/commit/a46be31a5f135aed2cb7b91b397b8964cb2cf11f)]:
+- Updated dependencies [[`0b73daa`](https://github.com/ne-oki/color-blindness-devtool/commit/0b73daade770d6755bddd6cef0035cee937eca5d), [`7df5381`](https://github.com/ne-oki/color-blindness-devtool/commit/7df5381be89b2875c68cf9d56c5be8b0d9463fe1), [`a46be31`](https://github.com/ne-oki/color-blindness-devtool/commit/a46be31a5f135aed2cb7b91b397b8964cb2cf11f)]:
   - color-blindness-devtool@0.0.6
