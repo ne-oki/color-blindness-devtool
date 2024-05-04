@@ -1,6 +1,6 @@
 {
   "name": "color-blindness-devtool",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A web component for simulating color blindness in web application development",
   "keywords": [
     "web-components",
