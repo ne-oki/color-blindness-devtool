@@ -13,11 +13,11 @@
 
 ### Minor Changes
 
-- [#43](https://github.com/neokidev/color-blindness-devtool/pull/43) [`3f33c2e`](https://github.com/neokidev/color-blindness-devtool/commit/3f33c2e229a721243a9f521accf57acb16ec3db6) Thanks [@neokidev](https://github.com/neokidev)! - First official release!
+- [#43](https://github.com/ne-oki/color-blindness-devtool/pull/43) [`3f33c2e`](https://github.com/ne-oki/color-blindness-devtool/commit/3f33c2e229a721243a9f521accf57acb16ec3db6) Thanks [@ne-oki](https://github.com/ne-oki)! - First official release!
 
 ### Patch Changes
 
-- Updated dependencies [[`3f33c2e`](https://github.com/neokidev/color-blindness-devtool/commit/3f33c2e229a721243a9f521accf57acb16ec3db6)]:
+- Updated dependencies [[`3f33c2e`](https://github.com/ne-oki/color-blindness-devtool/commit/3f33c2e229a721243a9f521accf57acb16ec3db6)]:
   - color-blindness-devtool@0.1.0
 
 ## 0.0.1
