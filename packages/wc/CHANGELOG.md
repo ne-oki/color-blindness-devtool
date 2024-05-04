@@ -1,5 +1,11 @@
 # color-blindness-devtool
 
+## 0.1.1
+
+### Patch Changes
+
+- [#52](https://github.com/ne-oki/color-blindness-devtool/pull/52) [`678f227`](https://github.com/ne-oki/color-blindness-devtool/commit/678f2270c0551c3d5885a63c1115cb9cde810d70) Thanks [@ne-oki](https://github.com/ne-oki)! - Fix repo url
+
 ## 0.1.0
 
 ### Minor Changes
