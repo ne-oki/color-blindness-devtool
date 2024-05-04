@@ -2,7 +2,7 @@
   "$schema": "https://unpkg.com/@changesets/config@3.0.0/schema.json",
   "changelog": [
     "@changesets/changelog-github",
-    { "repo": "neokidev/color-blindness-devtool" }
+    { "repo": "ne-oki/color-blindness-devtool" }
   ],
   "commit": false,
   "fixed": [],
