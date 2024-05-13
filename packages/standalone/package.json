@@ -8,13 +8,13 @@
     "lit",
     "standalone"
   ],
-  "homepage": "https://github.com/ne-oki/color-blindness-devtool#readme",
+  "homepage": "https://github.com/neokidev/color-blindness-devtool#readme",
   "bugs": {
-    "url": "https://github.com/ne-oki/color-blindness-devtool/issues"
+    "url": "https://github.com/neokidev/color-blindness-devtool/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ne-oki/color-blindness-devtool.git"
+    "url": "https://github.com/neokidev/color-blindness-devtool.git"
   },
   "license": "MIT",
   "author": "neoki",
