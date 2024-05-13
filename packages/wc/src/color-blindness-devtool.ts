@@ -234,7 +234,7 @@ export class ColorBlindnessDevtool extends LitElement {
             <span class="version">${version}</span>
             <a
               class="github-link"
-              href="https://github.com/ne-oki/color-blindness-devtool"
+              href="https://github.com/neokidev/color-blindness-devtool"
               target="_blank"
               rel="noopener noreferrer"
             >
