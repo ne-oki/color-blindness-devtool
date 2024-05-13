@@ -1,6 +1,6 @@
 {
   "name": "@color-blindness-devtool/react",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A React component for simulating color blindness in web application development",
   "keywords": [
     "react",
@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "@lit/react": "^1.0.3",
-    "color-blindness-devtool": "^0.1.1"
+    "color-blindness-devtool": "^0.1.2"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.2.25",
