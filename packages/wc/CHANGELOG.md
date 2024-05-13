@@ -1,5 +1,11 @@
 # color-blindness-devtool
 
+## 0.1.2
+
+### Patch Changes
+
+- [`7947d0f`](https://github.com/neokidev/color-blindness-devtool/commit/7947d0f5fb08598ee436d4398a4fedc34b688bf9) Thanks [@neokidev](https://github.com/neokidev)! - Revert repo url
+
 ## 0.1.1
 
 ### Patch Changes
