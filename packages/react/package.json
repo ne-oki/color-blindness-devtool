@@ -8,13 +8,13 @@
     "typescript",
     "lit"
   ],
-  "homepage": "https://github.com/neokidev/color-blindness-devtool#readme",
+  "homepage": "https://github.com/neoki07/color-blindness-devtool#readme",
   "bugs": {
-    "url": "https://github.com/neokidev/color-blindness-devtool/issues"
+    "url": "https://github.com/neoki07/color-blindness-devtool/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/neokidev/color-blindness-devtool.git"
+    "url": "https://github.com/neoki07/color-blindness-devtool.git"
   },
   "license": "MIT",
   "author": "neoki",

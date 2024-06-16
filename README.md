@@ -1,8 +1,8 @@
 <h1 align="center"><img src="header.png" alt="Color Blindness DevTool"></h1>
 
 <p align="center">
-  <a href="https://github.com/neokidev/color-blindness-devtool/blob/main/LICENSE"><img src="https://img.shields.io/github/license/neokidev/color-blindness-devtool" alt="license"></a>
-  <a href="https://github.com/neokidev/color-blindness-devtool/actions/workflows/ci.yml"><img src="https://github.com/neokidev/color-blindness-devtool/actions/workflows/ci.yml/badge.svg" alt="ci"></a>
+  <a href="https://github.com/neoki07/color-blindness-devtool/blob/main/LICENSE"><img src="https://img.shields.io/github/license/neoki07/color-blindness-devtool" alt="license"></a>
+  <a href="https://github.com/neoki07/color-blindness-devtool/actions/workflows/ci.yml"><img src="https://github.com/neoki07/color-blindness-devtool/actions/workflows/ci.yml/badge.svg" alt="ci"></a>
 </p>
 
 <div align="center">
